@@ -3,11 +3,21 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Speakercard from "../components/Speakercard.astro";
 import Ticketcard from "../components/Ticketcard.astro";
+const data = await fetch(
+  "https://abfrtnafkorgiedfqqev.supabase.co/rest/v1/oplaegsholdere",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFiZnJ0bmFma29yZ2llZGZxcWV2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYyNDcwMDcsImV4cCI6MjAxMTgyMzAwN30.i6rJ2nfgh5Ybo40FtWbB783MzTUXCQtVaoeMYoy0AQw    ",
+    },
+  }
+).then((res) => res.json());
+
+console.log(data);
 ---
 
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,6 +27,12 @@ import Ticketcard from "../components/Ticketcard.astro";
   <body>
     <!-- <h1>Hey</h1> -->
     <Header />
-    <img src="uxkbhavana/public/logo.png" alt="">
+    <img src="uxkbhavana/public/logo.png" alt="" />
+
+    {
+      data.forEach((show) => {
+        return <Speakercard data={show} />;
+      })
+    }
   </body>
 </html>

@@ -1,16 +1,11 @@
+---
+const { data } = Astro.props;
+console.log(data);
+---
 
-
-<template id="item_boks">
-  <section>
-    <article class="speaker">
-      <div class="grid_card">
-        <h4>Job</h4>
-        <img src="" alt="speakerimg" />
-        <h3>Navn</h3>
-        <p class="beskrivelse">beskrivelse</p>
-      </div>
-    </article>
-  </section>
-</template>
-
-<script src="../scripts/speakercard.js"></script>
+<article class="speaker">
+  <h4>{data.job} job</h4>
+  <img src={data.img} alt="speakerimg" />
+  <h3>{data.name} navn</h3>
+  <p>{data.description} description</p>
+</article>
