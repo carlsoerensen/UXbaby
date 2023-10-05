@@ -30,7 +30,7 @@ console.log(data);
     <img src="uxkbhavana/public/logo.png" alt="" />
 
     {
-      data.forEach((show) => {
+      data.map((show) => {
         return <Speakercard data={show} />;
       })
     }
