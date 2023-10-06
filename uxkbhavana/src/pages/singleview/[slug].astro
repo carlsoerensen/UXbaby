@@ -23,4 +23,29 @@ const { slug } = Astro.params;
 const { post } = Astro.props;
 ---
 
-<h1>{slug}: {post.name}</h1>
+<div class="speaker_singleview">
+  <div class="rightside">
+    <img src={post.img} alt="singleviewimg" />
+  </div>
+  <div class="leftside">
+    <h4>Speaker 2024</h4>
+    <h1>{post.name}</h1>
+    <h3>{post.job}</h3>
+    <p>{post.description}</p>
+  </div>
+</div>
+
+<div class="about">
+  <h1>About</h1>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus debitis
+    rerum maiores asperiores nulla perferendis, totam, esse ipsa iure animi
+    placeat nobis itaque sint similique quos! Placeat autem recusandae debitis.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus debitis
+    rerum maiores asperiores nulla perferendis, totam, esse ipsa iure animi
+    placeat nobis itaque sint similique quos! Placeat autem recusandae debitis.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus debitis
+    rerum maiores asperiores nulla perferendis, totam, esse ipsa iure animi
+    placeat nobis itaque sint similique quos! Placeat autem recusandae debitis.
+  </p>
+</div>
