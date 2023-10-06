@@ -1,0 +1,26 @@
+---
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://abfrtnafkorgiedfqqev.supabase.co/rest/v1/oplaegsholdere",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFiZnJ0bmFma29yZ2llZGZxcWV2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYyNDcwMDcsImV4cCI6MjAxMTgyMzAwN30.i6rJ2nfgh5Ybo40FtWbB783MzTUXCQtVaoeMYoy0AQw    ",
+      },
+    }
+  ).then((response) => response.json());
+
+  return data.map((post) => {
+    return {
+      params: { slug: post.slug },
+      props: { post },
+    };
+  });
+}
+
+const { slug } = Astro.params;
+const { post } = Astro.props;
+---
+
+<h1>{slug}: {post.name}</h1>
