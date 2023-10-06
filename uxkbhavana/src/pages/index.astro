@@ -25,14 +25,29 @@ console.log(data);
     <title>Document</title>
   </head>
   <body>
-    <!-- <h1>Hey</h1> -->
-    <Header />
-    <img src="uxkbhavana/public/logo.png" alt="" />
+    <header><Header /></header>
 
-    {
-      data.map((show) => {
-        return <Speakercard data={show} />;
-      })
-    }
+    <main>
+      <img src="uxkbhavana/public/logo.png" alt="" />
+
+      <div class="video"></div>
+
+      <div class="theme"></div>
+
+      <div class="tickets">
+        
+      </div>
+      <div class="speakers">
+        {
+          data.map((show) => {
+            return <Speakercard data={show} />;
+          })
+        }
+      </div>
+      <div class="about"></div>
+      <div class="sponsors"></div>
+    </main>
+
+    <footer></footer>
   </body>
 </html>

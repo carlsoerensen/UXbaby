@@ -1,0 +1,19 @@
+---
+const ticket = Astro.props.ticket;
+const price = Astro.props.price;
+const image = Astro.props.image;
+const text = Astro.props.text;
+const early = Astro.props.early;
+---
+
+<div class="ticketcard">
+  <div class="tickettext">
+    <h1>{ticket}</h1>
+    <p>{early}</p>
+    <h4>{price}</h4>
+    <p>{text}</p>
+  </div>
+  <div class="ticketimage">
+    <img src={image} alt="ticketimg" />
+  </div>
+</div>
