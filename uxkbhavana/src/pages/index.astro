@@ -34,37 +34,31 @@ console.log(data);
 
       <div class="theme"></div>
 
-      <div class="tickets">
-        <Ticketcard
-          ticket="Live event ticket"
-          early="(Early bird price)"
-          price="DKK 6.500,-"
-          text="Join us live* in Copenhagen! Read more about what this ticket includes"
-          image="https://picsum.photos/id/68/150/150"
-        />
-
-        <Ticketcard
-          ticket="Live-stream ticket"
-          early="(Early bird price)"
-          price="DKK 3.000,-"
-          text="Watch the full live-stream footage of both days. 
-          Read more about what this ticket includes"
-          image="https://picsum.photos/id/68/150/150"
-        />
-
-        <Ticketcard
-          ticket="Group ticket"
-          text="Join us live or online as a group. Read more about what this ticket includes"
-          image="https://picsum.photos/id/68/150/150"
-        />
-
-        <Ticketcard
-          ticket="Recording of the 2023 live-stream"
-          text="Watch or rewatch both days of the conference. 
-          Read more about what this ticket includes"
-          image="https://picsum.photos/id/68/150/150"
-        />
-      </div>
+      <div class="tickets"></div>
+      <Ticketcard
+        ticket="Live-event ticket"
+        early="(Early bird price)"
+        price="DKK 6.500 ,-"
+        text="Join us live* in Copenhagen! Read more about what this ticket includes"
+        image=""
+      />
+      <Ticketcard
+        ticket="Live-event ticket"
+        early="(Early bird price)"
+        price="DKK 6.500 ,-"
+        text="Watch the full live-stream footage of both days. Read more about what this ticket includes"
+        image=""
+      />
+      <Ticketcard
+        ticket="Group Ticket"
+        text="Join us live or online as a group. Read more about what this ticket includes"
+        image=""
+      />
+      <Ticketcard
+        ticket="Recording of the 2023 live-stream"
+        text="Watch or rewatch both days of the conference. Read more about what this ticket includes"
+        image=""
+      />
       <div class="speakers">
         {
           data.map((show) => {
