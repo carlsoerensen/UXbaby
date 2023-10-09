@@ -31,6 +31,7 @@ console.log(data);
   <body>
     <header><Header /></header>
 
+
     <main>
       <img src="uxkbhavana/public/logo.png" alt="" />
 
@@ -86,4 +87,27 @@ console.log(data);
       <Footer />
     </footer>
   </body>
+
+  <style>
+    .speakers {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      @media only screen and (max-width: 600px)  {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .card-button {
+    width: auto;
+    height: auto;
+background: #81D6D4;
+  }
+    }
+    }
+
+   
+
+  </style>
+
+
 </html>
