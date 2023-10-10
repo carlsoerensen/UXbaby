@@ -1,4 +1,5 @@
 ---
+import Header from "../../components/Header.astro";
 export async function getStaticPaths() {
   const data = await fetch(
     "https://abfrtnafkorgiedfqqev.supabase.co/rest/v1/oplaegsholdere",
@@ -22,7 +23,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 ---
-
+<header><Header /></header>
 <div class="speaker_singleview">
   <div class="rightside">
     <img src={post.img} alt="singleviewimg" />
