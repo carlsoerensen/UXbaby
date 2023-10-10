@@ -10,8 +10,18 @@
       our sustainable projects, and brainstorm how designers can drive positive
       systemic change.
     </p>
-    <img src="public/ikoner/chevron-right.svg" alt="" id="pil" /><h3>Live and online talks, workshops, panel discussions, and Round Table sessions</h3>
-    <img src="public/ikoner/chevron-right.svg" alt=""/><h3>UX Copenhagen connects people from all over the world for essential conversations.</h3>
+    <div class="pilboks">
+      <img src="public/ikoner/chevron-right.svg" alt="" class="pil" /><h3>
+        Live and online talks, workshops, panel discussions, and Round Table
+        sessions
+      </h3>
+    </div>
+    <div class="pilboks">
+      <img src="public/ikoner/chevron-right.svg" alt="" class="pil" /><h3>
+        UX Copenhagen connects people from all over the world for essential
+        conversations.
+      </h3>
+    </div>
   </div>
 
   <div class="imageside">
@@ -20,11 +30,36 @@
 </div>
 
 <style>
-  .themesection{
+  .themesection {
     margin: 10%;
   }
 
-  #pil{
-    fill: black;
+  .pil {
+    filter: invert(0.8);
   }
+
+  .pilboks{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 750px){
+.themesection{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+}
+
+.tekstside{
+  grid-column: 1/2;
+}
+
+.imageside{
+  grid-column: 2/3;
+}
+
+  
+
+}
 </style>
