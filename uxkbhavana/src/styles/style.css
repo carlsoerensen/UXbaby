@@ -1,0 +1,50 @@
+
+
+h1{
+    color: #13293D;
+    font-family: Montserrat;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2{
+    color: #13293D;
+    font-family: Montserrat;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h3 {
+    color: #13293D;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+h4{
+    color: #13293D;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+p{
+    color: #13293D;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+img{
+    max-width: 100%;
+}

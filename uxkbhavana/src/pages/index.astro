@@ -7,6 +7,7 @@ import Ticketcard from "../components/Ticketcard.astro";
 import Themesection from "../components/Themesection.astro";
 import Aboutsection from "../components/Aboutsection.astro";
 import Sponsorsection from "../components/Sponsorsection.astro";
+import "../styles/style.css";
 const data = await fetch(
   "https://abfrtnafkorgiedfqqev.supabase.co/rest/v1/oplaegsholdere",
   {
@@ -65,15 +66,15 @@ console.log(data);
         />
       </div>
 
-      <section id="speaker"> 
-      <div class="speakers">
-        {
-          data.map((show) => {
-            return <Speakercard data={show} />;
-          })
-        }
-      </div>
-    </section>
+      <section id="speaker">
+        <div class="speakers">
+          {
+            data.map((show) => {
+              return <Speakercard data={show} />;
+            })
+          }
+        </div>
+      </section>
 
       <img src="public/ikoner/social-ikoner/mail.svg" alt="" />
       <p>
@@ -83,9 +84,8 @@ console.log(data);
       </p>
 
       <section>
-      <Infobokse />
-    </section>
-   
+        <Infobokse />
+      </section>
 
       <Aboutsection />
       <Sponsorsection />
@@ -101,21 +101,16 @@ console.log(data);
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
 
-      @media only screen and (max-width: 600px)  {
-      display: grid;
-      grid-template-columns: 1fr;
+      @media only screen and (max-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr;
 
-      .card-button {
-    width: auto;
-    height: auto;
-background: #81D6D4;
-  }
+        .card-button {
+          width: auto;
+          height: auto;
+          background: #81d6d4;
+        }
+      }
     }
-    }
-
-  
-
   </style>
-
-
 </html>
