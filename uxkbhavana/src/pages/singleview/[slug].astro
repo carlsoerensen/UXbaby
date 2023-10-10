@@ -24,20 +24,24 @@ const { slug } = Astro.params;
 const { post } = Astro.props;
 ---
 <header><Header /></header>
+
 <div class="speaker_singleview">
-  <div class="rightside">
+
+  <div class="grid_item"> 
     <img src={post.img} alt="singleviewimg" />
   </div>
-  <div class="leftside">
+
+  <div class="rightside">
     <h4>Speaker 2024</h4>
     <h1>{post.name}</h1>
     <h3>{post.job}</h3>
     <p>{post.description}</p>
-  </div>
-</div>
+      </div>
+    </div>  
+
 
 <div class="about">
-  <h1>About</h1>
+  <h1 class="abouthead">About</h1>
   <p>
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus debitis
     rerum maiores asperiores nulla perferendis, totam, esse ipsa iure animi
@@ -50,3 +54,102 @@ const { post } = Astro.props;
     placeat nobis itaque sint similique quos! Placeat autem recusandae debitis.
   </p>
 </div>
+
+<style>
+
+  .speaker_singleview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+background: #99B7C2;
+  }
+
+
+img {
+    max-width: 50%; /* Set the width of your image */
+    justify-content: center;
+    height: auto;
+     margin-right: -130px; 
+}
+
+.grid_item {
+  display: grid;
+  place-items: center;
+
+}
+
+.rightside {
+    text-align: left;
+}
+h4 {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+    font-weight: 300; /* Use 300 for light font weight */
+    color: #f1f1f1; /* Very light text color */
+    font-size: 32px;
+}
+
+h1 {
+  color: #000;
+font-family: Montserrat;
+font-size: 50px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+h3 { 
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+font-size: 28px;
+font-style: italic;
+font-weight: 300;
+line-height: 30px; /* 107.143% */
+}
+
+p {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 100;
+line-height: 30px; /* 125% */
+}
+
+
+
+.about h1 {
+  color: #000;
+font-family: Montserrat;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+
+.about {
+ margin: 0 16%;
+}
+
+@media only screen and (max-width: 600px)  {
+            .speaker_singleview {
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 100%;
+            height: 650px;
+            place-items: center;
+        }
+
+        img {
+          max-width: 50%; /* Set the width of your image */
+    justify-content: center;
+    height: auto;
+    margin-right: 0px; 
+
+        }
+      }
+
+</style>
