@@ -22,6 +22,10 @@ const early = Astro.props.early;
 <style>
   img {
     background: #99b7c2;
+    border-radius: 10px;
+    margin: 10%;
+    height: 80%;
+    width: 80%;
   }
 
   h1 {
@@ -52,10 +56,23 @@ const early = Astro.props.early;
     padding: 2%;
     width: 237px;
     height: 210px;
+    order: 1;
+    margin: 5%;
 
   }
 
+  .tickettext{
+    order: 2;
+  }
+  .tickettext h1{text-align: left;}
   .ticketcard {
+    display: flex;
+    flex-direction: row;
+    max-width: 750px;
+    
+
+  }
+  /*.ticketcard {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;

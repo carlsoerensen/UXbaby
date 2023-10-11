@@ -42,6 +42,7 @@ console.log(data);
         <h1>Tickets</h1>
         <div class="tickets">
           <Ticketcard
+            id="ticketcard1"
             ticket="Live-event ticket"
             early="(Early bird price)"
             price="DKK 6.500 ,-"
@@ -49,6 +50,7 @@ console.log(data);
             image="billet1.svg"
           />
           <Ticketcard
+            id="ticketcard2"
             ticket="Live-stream ticket"
             early="(Early bird price)"
             price="DKK 3.000 ,-"
@@ -56,11 +58,13 @@ console.log(data);
             image="billet2.svg"
           />
           <Ticketcard
+            id="ticketcard3"
             ticket="Group Ticket"
             text="Join us live or online as a group. Read more about what this ticket includes"
             image="billet3.svg"
           />
           <Ticketcard
+            id="ticketcard4"
             ticket="Recording of the 2023 live-stream"
             text="Watch or rewatch both days of the conference. Read more about what this ticket includes"
             image="billet4.svg"
@@ -101,13 +105,24 @@ console.log(data);
   </body>
 
   <style>
-
     /* Ticket Section */
 
-    .ticketsection{
+    .ticketsection {
       margin: 10%;
     }
+    .ticketsection h1 {
+      text-align: center;
+    }
+    @media (min-width: 750px){
+    .tickets {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2rem;
+    }
 
+    
+  }
 
     /* Speaker Section */
     .speakers {
