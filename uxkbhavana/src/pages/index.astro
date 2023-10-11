@@ -38,46 +38,46 @@ console.log(data);
       <div class="video"></div>
 
       <Themesection />
-
-      <h1>Tickets</h1>
-      <div class="tickets">
-        <Ticketcard
-          ticket="Live-event ticket"
-          early="(Early bird price)"
-          price="DKK 6.500 ,-"
-          text="Join us live* in Copenhagen! Read more about what this ticket includes"
-          image="billet1.svg"
-        />
-        <Ticketcard
-          ticket="Live-stream ticket"
-          early="(Early bird price)"
-          price="DKK 3.000 ,-"
-          text="Watch the full live-stream footage of both days. Read more about what this ticket includes"
-          image="billet2.svg"
-        />
-        <Ticketcard
-          ticket="Group Ticket"
-          text="Join us live or online as a group. Read more about what this ticket includes"
-          image="billet3.svg"
-        />
-        <Ticketcard
-          ticket="Recording of the 2023 live-stream"
-          text="Watch or rewatch both days of the conference. Read more about what this ticket includes"
-          image="billet4.svg"
-        />
+      <div class="ticketsection">
+        <h1>Tickets</h1>
+        <div class="tickets">
+          <Ticketcard
+            ticket="Live-event ticket"
+            early="(Early bird price)"
+            price="DKK 6.500 ,-"
+            text="Join us live* in Copenhagen! Read more about what this ticket includes"
+            image="billet1.svg"
+          />
+          <Ticketcard
+            ticket="Live-stream ticket"
+            early="(Early bird price)"
+            price="DKK 3.000 ,-"
+            text="Watch the full live-stream footage of both days. Read more about what this ticket includes"
+            image="billet2.svg"
+          />
+          <Ticketcard
+            ticket="Group Ticket"
+            text="Join us live or online as a group. Read more about what this ticket includes"
+            image="billet3.svg"
+          />
+          <Ticketcard
+            ticket="Recording of the 2023 live-stream"
+            text="Watch or rewatch both days of the conference. Read more about what this ticket includes"
+            image="billet4.svg"
+          />
+        </div>
       </div>
-
       <section id="speaker">
         <h1>This years speakers</h1>
         <div class="speakers">
-          <div class="speaker_item"> 
-          {
-            data.map((show) => {
-              return <Speakercard data={show} />;
-            })
-          }
+          <div class="speaker_item">
+            {
+              data.map((show) => {
+                return <Speakercard data={show} />;
+              })
+            }
           </div>
-          </div>
+        </div>
       </section>
 
       <img src="public/ikoner/social-ikoner/mail.svg" alt="" />
@@ -101,6 +101,15 @@ console.log(data);
   </body>
 
   <style>
+
+    /* Ticket Section */
+
+    .ticketsection{
+      margin: 10%;
+    }
+
+
+    /* Speaker Section */
     .speakers {
       display: flex;
       overflow-x: auto;
@@ -109,17 +118,12 @@ console.log(data);
       line-height: 50px;
     }
 
-    .speakers::-webkit-scrollbar{
+    .speakers::-webkit-scrollbar {
       width: 0;
     }
 
     .speaker_item {
       display: flex;
-
     }
-
-
-
-
   </style>
 </html>
