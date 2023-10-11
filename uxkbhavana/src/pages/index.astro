@@ -71,8 +71,9 @@ console.log(data);
           />
         </div>
       </div>
+      <div class="speakersection">
       <section id="speaker">
-        <h1>This years speakers</h1>
+        <h1 class="speakerh1">This years speakers</h1>
         <div class="speakers">
           <div class="speaker_item">
             {
@@ -83,17 +84,18 @@ console.log(data);
           </div>
         </div>
       </section>
-
-      <img src="public/ikoner/social-ikoner/mail.svg" alt="" />
-      <p>
-        Our call for speakers is open each year from June 1 – Sep 1. <br
-        />Please send an email to conference curator Helle Martens with your
-        proposal: hello (at) uxcopenhagen.com.
-      </p>
-
+      <div class="mailsection">
+        <img src="public/ikoner/social-ikoner/mail.svg" alt="" />
+        <p>
+          Our call for speakers is open each year from June 1 – Sep 1. <br
+          />Please send an email to conference curator Helle Martens with your
+          proposal: hello (at) uxcopenhagen.com.
+        </p>
+      </div>
       <section>
         <Infobokse />
       </section>
+      </div>
 
       <Aboutsection />
       <Sponsorsection />
@@ -113,16 +115,14 @@ console.log(data);
     .ticketsection h1 {
       text-align: center;
     }
-    @media (min-width: 750px){
-    .tickets {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      gap: 2rem;
+    @media (min-width: 750px) {
+      .tickets {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+      }
     }
-
-    
-  }
 
     /* Speaker Section */
     .speakers {
@@ -131,6 +131,7 @@ console.log(data);
       width: auto;
       height: 600px;
       line-height: 50px;
+      margin-bottom: 0;
     }
 
     .speakers::-webkit-scrollbar {
@@ -139,6 +140,20 @@ console.log(data);
 
     .speaker_item {
       display: flex;
+      margin: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .speakersection{
+      margin: 4%;
+    }
+    .speakersection h1{
+      text-align: center;
+    }
+    .mailsection{
+      display: flex;
+      gap: 1rem;
     }
   </style>
 </html>

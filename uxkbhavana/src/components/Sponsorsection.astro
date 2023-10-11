@@ -1,29 +1,60 @@
 <div class="sponsorsection">
-  <h1>WE’RE SPONSORS TOO!</h1>
-  <p>
-    UX Copenhagen always donates some of its proceeds to charity. This year, we
-    helped raise money for an AED heart starter to be set up in our local
-    community.
-  </p>
-  <div class="mailsection">
-    <img src="public/ikoner/social-ikoner/mail.svg" alt="" />
+  <div class="sponsorsectionleftt">
+    <h1>WE’RE SPONSORS TOO!</h1>
     <p>
-      Are you interested in sponsoring us?<br />
-       Please reach out to hello (at) uxcopenhagen.com between April 1 –
-      September 1.
+      UX Copenhagen always donates some of its proceeds to charity. This year,
+      we helped raise money for an AED heart starter to be set up in our local
+      community.
     </p>
+    <div class="mailsection">
+      <img src="public/ikoner/social-ikoner/mail.svg" alt="" />
+      <p>
+        Are you interested in sponsoring us?<br />
+         Please reach out to hello (at) uxcopenhagen.com between April 1 –
+        September 1.
+      </p>
+    </div>
   </div>
-  <img src="hjerte.png" alt="" />
+  <div class="sponsorsectionright">
+    <img class="hjerteimg" src="hjerte.png" alt="" />
+  </div>
 </div>
 
 <style>
-    .mailsection{
-        display: flex;
-        justify-content: space-between;
-    }
-    @media (min-width: 600px){
-      
-  
+  .sponsorsection {
+    margin: 5%;
+  }
+  .mailsection {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 10%;
+  }
 
+  .sponsorsectionright img {
+    display: flex;
+    width: 60%;
+    height: 60%;
+  }
+  @media (min-width: 900px) {
+    .sponsorsection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 2rem;
     }
+
+    .sponsorsectionleft {
+      grid-column: 1/2;
+    }
+
+    .sponsorsectionright {
+      grid-column: 2/3;
+      place-items: center;
+    }
+
+    .hjerteimg {
+    margin: 10%;
+    margin-left: 20%;
+  }
+  }
 </style>
