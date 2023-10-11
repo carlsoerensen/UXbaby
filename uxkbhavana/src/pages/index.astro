@@ -70,12 +70,14 @@ console.log(data);
       <section id="speaker">
         <h1>This years speakers</h1>
         <div class="speakers">
+          <div class="speaker_item"> 
           {
             data.map((show) => {
               return <Speakercard data={show} />;
             })
           }
-        </div>
+          </div>
+          </div>
       </section>
 
       <img src="public/ikoner/social-ikoner/mail.svg" alt="" />
@@ -100,19 +102,24 @@ console.log(data);
 
   <style>
     .speakers {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-
-      @media only screen and (max-width: 600px) {
-        display: grid;
-        grid-template-columns: 1fr;
-
-        .card-button {
-          width: auto;
-          height: auto;
-          background: #81d6d4;
-        }
-      }
+      display: flex;
+      overflow-x: auto;
+      width: auto;
+      height: 600px;
+      line-height: 50px;
     }
+
+    .speakers::-webkit-scrollbar{
+      width: 0;
+    }
+
+    .speaker_item {
+      display: flex;
+
+    }
+
+
+
+
   </style>
 </html>
