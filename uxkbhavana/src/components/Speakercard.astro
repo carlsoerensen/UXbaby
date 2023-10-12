@@ -3,28 +3,26 @@ const { data } = Astro.props;
 console.log(data);
 ---
 
-  <article class="speaker">
-
+<article class="speaker">
   <h4>{data.job}</h4>
   <img src={data.img} />
 
-<div class="flexdiv">
-  <div class="tekstside">
-    <h3>{data.name}</h3>
-    <p>{data.country}</p>
+  <div class="flexdiv">
+    <div class="tekstside">
+      <h3>{data.name}</h3>
+      <p>{data.country}</p>
+    </div>
+    <div class="knapside">
+      <a href={`singleview/${data.slug}`}>
+        <button class="card-button">
+          <img src="/ikoner/chevron-right.svg" class="pil" />
+        </button><a></a>
+      </a>
+    </div>
   </div>
-  <div class="knapside">
-    <a href={`singleview/${data.slug}`}>
-    <button class="card-button"> <img src="/ikoner/chevron-right.svg" class="pil"> </button><a></a>
-    </a>
-  </div>
-</div>
 </article>
 
-
 <style>
- 
-
   article {
     width: 470px;
     height: 490px;
@@ -38,52 +36,51 @@ console.log(data);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-background: #6A99AC;
+    background: #6a99ac;
   }
 
   img {
     width: 300px;
-flex-shrink: 0;
-border-radius: 300px;
-/* background: lightgray 50% / cover no-repeat; */
-justify-self: center;
-display: block;
-margin: auto;
-filter: grayscale(100%);
-}
-
-h3 {
-  color: #FFF;
-font-family: Montserrat;
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
-
-  h4 {
-    color: #FFF;
-font-family: Montserrat;
-font-size: 15px;
-font-style: italic;
-font-weight: 300;
-line-height: 30px; /* 200% */
+    flex-shrink: 0;
+    border-radius: 300px;
+    /* background: lightgray 50% / cover no-repeat; */
+    justify-self: center;
+    display: block;
+    margin: auto;
+    filter: grayscale(100%);
   }
 
-p{
-  color: #FFF;
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
+  h3 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 
-  .flexdiv{
+  h4 {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 30px; /* 200% */
+  }
+
+  p {
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .flexdiv {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
   }
 
   .knapside {
@@ -92,26 +89,26 @@ line-height: normal;
     max-width: 100%; /* Knappens bredde vil ikke overskride kortets bredde */
     max-height: 100%; /* Knappens højde vil ikke overskride kortets højde */
     bottom: 10px; /* Afstand fra bunden af kortet */
-    right: 10px; 
+    right: 10px;
     cursor: pointer;
+    position: relative;
   }
 
   .card-button {
     width: 94px;
-height: 90px;
-background: #81D6D4;
-border: 0;
+    height: 90px;
+    background: #81d6d4;
+    border: 0;
   }
 
   button:hover {
-  transform: scale(1.1);
-background: #CAE8E7;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
-cursor: pointer;
-}
+    transform: scale(1.1);
+    background: #cae8e7;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
 
   .pil {
     width: 65px;
   }
-
 </style>
