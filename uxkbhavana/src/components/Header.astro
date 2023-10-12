@@ -138,7 +138,6 @@
       color: #475569;
     }
 
-
     .nav-logo {
       font-size: 2.1rem;
       font-weight: 500;
@@ -182,6 +181,21 @@
 
       .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+      }
+
+      button {
+        display: flex;
+        padding: 8px 18px; /* Halv størrelse af original padding */
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px solid
+          var(--grayscale-900-opacity-12, rgba(18, 17, 39, 0.12));
+        background-color: white;
+        font-size: 10px; /* Halv størrelse af original font-size */
+        font-style: normal;
+        font-weight: 500;
+        line-height: 12px;
       }
     }
   </style>
