@@ -1,6 +1,7 @@
 ---
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import "../../styles/style.css";
 export async function getStaticPaths() {
   const data = await fetch(
     "https://abfrtnafkorgiedfqqev.supabase.co/rest/v1/oplaegsholdere",
@@ -67,6 +68,7 @@ const { post } = Astro.props;
     align-items: center;
     height: 60vh;
     background: #99b7c2;
+    margin-top: 80px;
   }
 
   img {
@@ -127,10 +129,12 @@ const { post } = Astro.props;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    padding-top: 4%;
   }
 
   .about {
     margin: 0 16%;
+    margin-bottom: 20%;
   }
 
   @media only screen and (max-width: 600px) {
