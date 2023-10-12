@@ -16,3 +16,28 @@ function closeMenu() {
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }
+
+// JavaScript code
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the height of the fixed header
+  const headerHeight = document.querySelector(".header").offsetHeight;
+
+  // Smooth scroll to anchor links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const offsetTop = targetElement.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+});

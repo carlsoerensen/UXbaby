@@ -1,0 +1,124 @@
+<section class="video-section">
+    <div class="video-container">
+        <video autoplay muted loop id="video-bg">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="text-overlay">
+            <div class="left-content">
+                <img src="footerlogo.svg" alt="logovideo">
+            </div>
+            <div class="right-content">
+                <h1>W20 - 21 Match 2024</h1>
+                <div class="location-info">
+                    <img src="../../public/ikoner/location.svg" alt="location">
+                    <h2>Big Bio Nordhavn, Hamborg Plads 6 in Nordhavn</h2>
+                </div>
+            </div>
+    </div>
+    </section>
+    
+    <style>
+    .video-section {
+        position: relative;
+        height: 80vh;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        justify-content: left;
+    }
+    
+    #video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.9;
+    }
+    
+    .text-overlay {
+        display: flex;
+        align-items: flex-end;
+        padding: 20px;
+        width: 100%;
+    }
+    
+    .left-content img {
+        width: 400px; /* Adjust the width of the logo to make it even bigger */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 20px;
+    }
+    
+    .right-content h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        color: white;
+    }
+    
+    .location-info {
+        display: flex;
+        align-items: center;
+    }
+    
+    .right-content .location-info {
+        display: flex; /* Make it a flex container */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .location-info img {
+        width: 30px; /* Adjust the width of the location icon as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px;
+    }
+    
+    
+    .right-content h2 {
+        font-size: 24px;
+        margin: 0;
+        color: white;
+    }
+    
+    .right-content img {
+        width: 30px; /* Adjust the width of the location icon as needed */
+        margin-right: 5px; /* Reduce the right margin */
+    }
+    
+    /* Media query for smaller screens (max-width: 768px) */
+    @media (max-width: 768px) {
+        .text-overlay {
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+    
+        .left-content img {
+            width: 200px; /* Adjust the width of the logo for smaller screens */
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    
+        .right-content {
+            font-size: 18px; /* Adjust font size for smaller screens */
+            margin-top: -20px;
+        }
+    
+        .location-info img {
+            width: 25px; /* Adjust the width of the location icon for smaller screens */
+            margin-right: 5px;
+        }
+    
+        .right-content h1 {
+            font-size: 28px; /* Adjust font size for smaller screens */
+            margin-bottom: 8px;
+        }
+    
+        .right-content h2 {
+            font-size: 20px; /* Adjust font size for smaller screens */
+        }
+    }
+    
+    
+    </style>
