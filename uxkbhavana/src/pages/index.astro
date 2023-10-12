@@ -7,6 +7,8 @@ import Ticketcard from "../components/Ticketcard.astro";
 import Themesection from "../components/Themesection.astro";
 import Aboutsection from "../components/Aboutsection.astro";
 import Sponsorsection from "../components/Sponsorsection.astro";
+import Video from "../components/Video.astro";
+
 import "../styles/style.css";
 const data = await fetch(
   "https://abfrtnafkorgiedfqqev.supabase.co/rest/v1/oplaegsholdere",
@@ -34,6 +36,7 @@ console.log(data);
   </head>
   <body>
     <header><Header /></header>
+    <Video />
 
     <main>
       <img src="uxkbhavana/public/logo.png" alt="" />
